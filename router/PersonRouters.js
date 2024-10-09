@@ -24,8 +24,8 @@ router.post('/',async(req,res)=>{
 
 router.get('/',async(req,res)=>{
     try{
-      const data=await person.find();
-      console.log('Data');
+      const data=await Person.find();
+      console.log('Data should be fetch')
       res.status(200).json(data);
     }catch(err){
         console.log(err);
