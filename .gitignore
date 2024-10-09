@@ -1,0 +1,5 @@
+# ignore node_module rirectory
+
+node_module/
+
+# other enteries...
