@@ -1,6 +1,8 @@
 const express=require('express');
 const router=express.Router();
 const Person=require('./../models/Person');
+const passport = require('passport');
+
 
 //  Post route to add the person
 
@@ -19,6 +21,7 @@ router.post('/',async(req,res)=>{
         res.status(500).json({error:"internal server error"})
     }
 })
+
 
 // Get Method to get the person
 

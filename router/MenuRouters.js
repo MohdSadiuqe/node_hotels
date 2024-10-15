@@ -18,7 +18,6 @@ router.post('/',async(req,res)=>{
     }
 })
 
-
 // Get Method to get menu item
 
 router.get('/',async(req,res)=>{
@@ -55,6 +54,7 @@ router.get('/:itemtaste',async(req,res)=>{
 router.put('/:id',async(req,res)=>{
     try {
         const menuid=req.params.id;
+
         const updatemenu=req.body;
 
         const response=await Menu.findByIdAndUpdate(menuid,updatemenu,{
@@ -73,6 +73,8 @@ router.put('/:id',async(req,res)=>{
     }
 })
 
+// Delete Menu items 
+
 router.delete('/:id',async(req,res)=>{
     try{
         const personId=req.params.id;
@@ -90,7 +92,5 @@ router.delete('/:id',async(req,res)=>{
 })
 
 // commit is added
+
 module.exports=router;
-
-
-
